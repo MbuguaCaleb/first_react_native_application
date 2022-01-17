@@ -1,13 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react'
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View, Button } from 'react-native'
 
 export default function App() {
+  const [outPutText, setOutPutText] = useState(
+    'Open up App.js to start working on your app!'
+  )
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>{outPutText}</Text>
+      <Button
+        title='Change Text'
+        onPress={() => setOutPutText('The Text Changed')}
+      />
+      <StatusBar style='auto' />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -17,4 +26,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
