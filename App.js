@@ -12,7 +12,7 @@ export default function App() {
       <Text>{outPutText}</Text>
       <Button
         title='Change Text'
-        onPress={() => setOutPutText('The Text Changed')}
+        onPress={() => setOutPutText('The Text Changed!')}
       />
       <StatusBar style='auto' />
     </View>
